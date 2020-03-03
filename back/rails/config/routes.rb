@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   #post 'login/login'
   post 'api/signup', to: 'signup#signup'
   post 'api/login', to: 'login#login'
+  mount ActionCable.server => '/api/cable'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

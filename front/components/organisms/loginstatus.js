@@ -1,8 +1,26 @@
 import React, {Component} from 'react'
 
+
+
+
 export default class LoginStatus extends Component {
     constructor (props) {
         super(props)
+    }
+
+    componentDidMount() {
+        var socket = new WebSocket('wss://rails.local/api/cable')
+        console.log(socket)
+        /*
+        socket.onmessage = function(e) {
+            alert(e)
+        }
+        */
+       /*
+       socket.onopen = function() {
+            alert('ok')
+        }
+        */
     }
 
     render () {
